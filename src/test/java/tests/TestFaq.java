@@ -58,14 +58,6 @@ public class TestFaq {
         register.ConfirmationOfPassword("Safaa123456");
         register.submitData();
     }
-    @Test
-    public void testCommonQuestions() throws IOException, ParseException {
-        JSONParser jsonParser= new JSONParser();
-        FileReader fileReader = new FileReader("TestDataFiels/commonQs.json");
-//Read Json file
-        Object obj = jsonParser.parse(fileReader);
-        JSONObject jsonObject = (JSONObject)obj;
-    }
    /* @Test(description = "create new account")
     public void createNewAccount() throws IOException, ParseException {
         faq.backToRegisterPage();
