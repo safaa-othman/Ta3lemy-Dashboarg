@@ -35,10 +35,11 @@ public class TestFaq {
         driver.manage().window().maximize();
         faq.openTa3limyDashboard();
         faq.openfaqPage();
+         }
+    public  void assertTitlePageMeetFaq() throws IOException, ParseException {
         JSONParser jsonParser = new JSONParser();
         FileReader reader = new FileReader("TestDataFiles/commonQs.json");
         Object obj = jsonParser.parse(reader);
-
         String title = faq.title();
         Assert.assertEquals(title , "obj.commonQuestions.titleOfPage");
     }
@@ -56,6 +57,7 @@ public class TestFaq {
         register.setGender();
         register.setPassword("Safaa123456");
         register.ConfirmationOfPassword("Safaa123456");
+        register.acceptButton();
         register.submitData();
     }
    /* @Test(description = "create new account")
