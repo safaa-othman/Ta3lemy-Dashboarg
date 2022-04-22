@@ -23,6 +23,7 @@ public class RegisterPage {
     By gender =By.xpath("//input[@name='gender']");
     By password =By.xpath("//input[@name='password']");
     By passwordConfirmation =By.xpath("//input[@name='passwordConfirmation']");
+    By acceptButton = By.xpath("//label[@for='termsAndConditionsCheck']");
     By submit =By.xpath("//input[@type='submit']");
 
     // keywords/ actions
@@ -62,6 +63,9 @@ public class RegisterPage {
     }
     public void ConfirmationOfPassword(String passwordConfirm){
         driver.findElement(passwordConfirmation).sendKeys(passwordConfirm);
+    }
+     public void acceptButton(){
+        driver.findElement(acceptButton).clear();
     }
     public void submitData(){
         driver.findElement(submit).click();
